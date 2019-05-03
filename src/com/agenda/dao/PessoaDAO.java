@@ -58,6 +58,8 @@ public class PessoaDAO {
 			while(rs.next()) {
 				
 				Pessoa pessoa = new Pessoa();
+				
+				pessoa.setId(rs.getInt("id"));
 				pessoa.setNome(rs.getString("nome"));
 				pessoa.setEnd(rs.getString("endereco"));
 				pessoa.setEmail(rs.getString("email"));
@@ -73,8 +75,6 @@ public class PessoaDAO {
 			throw new RuntimeException(e);
 		}
 		
-		
-	
 	}
 
 }

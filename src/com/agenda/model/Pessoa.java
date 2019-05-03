@@ -6,7 +6,7 @@ public class Pessoa {
 	private String tel;
 	private String email;
 	private String end;
-	
+	private int id;
 	
 	public String getNome() {
 		return nome;
@@ -32,9 +32,13 @@ public class Pessoa {
 	public void setEnd(String end) {
 		this.end = end;
 	}
-	
-	
-	
-	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 
+	
+		
 }

@@ -12,7 +12,7 @@ public class CadastraUsuarioService {
 	public void cadastra(Pessoa pessoa) {
 
 		this.dao.adiciona(pessoa);
-		System.out.println(buscaPessoas());
+	
 		
 		
 		
