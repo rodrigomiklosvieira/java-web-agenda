@@ -76,5 +76,11 @@ public class PessoaDAO {
 		}
 		
 	}
+	
+	public void deletar(Pessoa pessoa) {
+		
+	System.out.println("teste");
+		
+	}
 
 }

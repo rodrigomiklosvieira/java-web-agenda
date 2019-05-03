@@ -35,7 +35,7 @@
 					href="adiciona-contato.html">Cadastrar contato</a></li>
 
 				<li class="nav-item"><a class="btn btn-secondary "
-					href="listar.jsp">Contatos <span class="sr-only">(current)</span></a>
+					href="busca-contato">Listar <span class="sr-only">(current)</span></a>
 				</li>
 			</ul>
 		</div>
@@ -55,6 +55,7 @@
 					<th scope="col">Email:</th>
 					<th scope="col">Endereço:</th>
 					<th scope="col">Telefone:</th>
+					<th scope="col">Opções:</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -65,6 +66,7 @@
 						<td>${pessoa.email}</td>
 						<td>${pessoa.end}</td>
 						<td>${pessoa.tel}</td>
+						<td><a  href="remover-contato">Remover</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
