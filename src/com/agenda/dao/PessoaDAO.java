@@ -79,7 +79,25 @@ public class PessoaDAO {
 	
 	public void deletar(Pessoa pessoa) {
 		
-	System.out.println("teste");
+	String SQL = "delete from pessoas where id = ?";
+		
+		
+		
+		try {
+			
+			this.connection = new ConnectionFactory().getConnection();
+			PreparedStatement stmt = this.connection.prepareStatement(SQL);
+			
+			stmt.setInt(1, pessoa.getId());
+			stmt.execute();
+			stmt.close();
+			
+		
+			
+		}catch (SQLException e) {
+			
+			throw new RuntimeException(e);
+		}
 		
 	}
 

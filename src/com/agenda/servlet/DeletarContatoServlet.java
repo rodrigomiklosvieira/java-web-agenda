@@ -19,18 +19,18 @@ public class DeletarContatoServlet extends HttpServlet{
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	
-		
+
+                CadastraUsuarioService service = new CadastraUsuarioService();
+
+		int id = Integer.parseInt(req.getParameter("id"));
+
 		Pessoa pessoa = new Pessoa();
-		
-		CadastraUsuarioService service = new CadastraUsuarioService();
+		pessoa.setId(id);
+
 		service.removeContato(pessoa);
 		
-		
-		
+		resp.sendRedirect("busca-contato");
 
 	}
 	
-	
-
 }

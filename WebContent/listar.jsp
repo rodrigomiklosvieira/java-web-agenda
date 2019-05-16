@@ -66,7 +66,7 @@
 						<td>${pessoa.email}</td>
 						<td>${pessoa.end}</td>
 						<td>${pessoa.tel}</td>
-						<td><a  href="remover-contato">Remover</a></td>
+						<td><a  href="remover-contato?id=${pessoa.id}">Remover</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
