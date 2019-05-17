@@ -32,7 +32,7 @@
 				<li class="nav-item active"><a class="nav-link"
 					href="index.html">Home </a></li>
 				<li class="nav-item"><a class="btn btn-secondary "
-					href="adiciona-contato.html">Cadastrar contato</a></li>
+					href="adiciona-contato.jsp">Cadastrar contato</a></li>
 
 				<li class="nav-item"><a class="btn btn-secondary "
 					href="busca-contato">Listar <span class="sr-only">(current)</span></a>
@@ -66,7 +66,8 @@
 						<td>${pessoa.email}</td>
 						<td>${pessoa.end}</td>
 						<td>${pessoa.tel}</td>
-						<td><a  href="remover-contato?id=${pessoa.id}">Remover</a></td>
+						<td><a  href="remover-contato?id=${pessoa.id}">Remover</a><span> | </span>
+						<a  href="adiciona-contato.jsp?id=${pessoa.id}&nome=${pessoa.nome}&email=${pessoa.email}&end=${pessoa.end}&tel=${pessoa.tel}">Editar</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

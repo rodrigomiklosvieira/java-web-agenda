@@ -29,6 +29,11 @@ public class CadastraUsuarioService {
 		dao.deletar(pessoa);
 	}
 	
+	public void alterarContato(Pessoa pessoa) {
+		
+		dao.alterar(pessoa);
+	}
+	
 	
 	
 

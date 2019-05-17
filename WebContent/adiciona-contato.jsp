@@ -1,3 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,9 +46,10 @@
 				<form action="cadastra-usuario" id="form-produto">
 					<div class="form-row">
 						<div class="form-group col-md-12">
-							<label for="nome">Nome</label> <input type="text"
+							<label for="nome">Nome</label> 
+							<input type="text"
 								class="form-control" id="name" name="name" placeholder="Nome"
-								required="on">
+								required="on" value="${param.nome}">
 						</div>
 					</div>
 
@@ -50,19 +57,19 @@
 						<div class="form-group col-md-3">
 							<label for="tel">Telefone</label> 
 							
-							<input data-mask="(99)9999-9999" class="form-control" id="tel" name="tel" placeholder="Telefone">
+							<input data-mask="(99)9999-9999" class="form-control" id="tel" name="tel" placeholder="Telefone" value="${param.tel}">
 						</div>
 
 						<div class="form-group col-md-3">
 							<label for="email">E-mail</label> 
 							
-							<input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
+							<input type="email" class="form-control" id="email" name="email" placeholder="E-mail" value="${param.email}">
 						</div>
 
 						<div class="form-group col-md-6">
 							<label for="end">Endereço</label> 
 							
-							<input type="text" class="form-control" id="end" name="end" placeholder="Endereço">
+							<input type="text" class="form-control" id="end" name="end" placeholder="EndereÃ§o" value="${param.end}">
 						</div>
 
 						<div class="form-group col-md-6">
