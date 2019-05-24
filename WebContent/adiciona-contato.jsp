@@ -44,6 +44,9 @@
 		<div class="card">
 			<div class="card-body">
 				<form action="cadastra-usuario" id="form-produto">
+				
+				<input type="hidden" id="id" name="id" value="${param.id}">
+				
 					<div class="form-row">
 						<div class="form-group col-md-12">
 							<label for="nome">Nome</label> 
@@ -69,7 +72,7 @@
 						<div class="form-group col-md-6">
 							<label for="end">Endereço</label> 
 							
-							<input type="text" class="form-control" id="end" name="end" placeholder="EndereÃ§o" value="${param.end}">
+							<input type="text" class="form-control" id="end" name="end" placeholder="Endereço" value="${param.end}">
 						</div>
 
 						<div class="form-group col-md-6">

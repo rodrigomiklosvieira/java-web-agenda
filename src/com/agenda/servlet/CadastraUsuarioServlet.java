@@ -33,7 +33,7 @@ public class CadastraUsuarioServlet extends HttpServlet {
 			
 			
 		if(null != request.getParameter("id") && !request.getParameter("id").equals("")) {
-			
+			pessoa.setId(Integer.parseInt(request.getParameter("id")));
 			service.alterarContato(pessoa);
 		}else {
 			service.cadastra(pessoa);
