@@ -2,7 +2,6 @@ package com.agenda.dao;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
 import com.agenda.model.Pessoa;
 import com.agenda.util.ConnectionFactory;
 import com.mysql.jdbc.Connection;
@@ -11,18 +10,18 @@ import com.mysql.jdbc.Connection;
 public class PessoaDAO {
 	
 	private Connection connection;
+	private PreparedStatement stmt;
+	
+	public PessoaDAO() {
+		this.connection = new ConnectionFactory().getConnection();
+	}
 	
 	public void adiciona(Pessoa pessoa) {
-		
-		
+				
 		String SQL = "insert into pessoas (nome, email, endereco, telefone) values (?,?,?,?)";
-		
-		
-		
+				
 		try {
-			
-			this.connection = new ConnectionFactory().getConnection();
-			PreparedStatement stmt = this.connection.prepareStatement(SQL);
+			this.stmt = this.connection.prepareStatement(SQL);
 			
 			stmt.setString(1, pessoa.getNome());
 			stmt.setString(2, pessoa.getEmail());
@@ -31,9 +30,7 @@ public class PessoaDAO {
 			
 			stmt.execute();
 			stmt.close();
-			
-		
-			
+					
 		}catch (SQLException e) {
 			
 			throw new RuntimeException(e);
@@ -47,7 +44,6 @@ public class PessoaDAO {
 		String SQL = "Select * from pessoas";
 		
 		try {
-			
 			this.connection = new ConnectionFactory().getConnection();
 			PreparedStatement stmt = this.connection.prepareStatement(SQL);
 			
@@ -84,7 +80,6 @@ public class PessoaDAO {
 		
 		
 		try {
-			
 			this.connection = new ConnectionFactory().getConnection();
 			PreparedStatement stmt = this.connection.prepareStatement(SQL);
 			
@@ -105,8 +100,7 @@ public class PessoaDAO {
 		
 		String SQL = "update pessoas set nome=?, email=?, endereco=?, telefone=? where id=?";
 		
-try {
-			
+		try {
 			this.connection = new ConnectionFactory().getConnection();
 			PreparedStatement stmt = this.connection.prepareStatement(SQL);
 			
